@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollSpy();
     initHeroTyping();
     initTerminalTabs();
-    initSkillFilters();
+    initAnimatedSkillBars();
     initShiviSimulator();
     initClipboard();
     initContactForm();
@@ -45,7 +45,6 @@ function initCustomCursor() {
         dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
     }, { passive: true });
 
-    // Smooth trailing ring
     function renderRing() {
         ringX += (mouseX - ringX) * 0.18;
         ringY += (mouseY - ringY) * 0.18;
@@ -54,8 +53,7 @@ function initCustomCursor() {
     }
     renderRing();
 
-    // Hover effect on interactive elements
-    const interactiveSelectors = 'a, button, input, textarea, .bento-card, .skill-matrix-card, .term-tab, .chat-chip';
+    const interactiveSelectors = 'a, button, input, textarea, .bento-card, .skill-category-box, .term-tab, .chat-chip';
     document.querySelectorAll(interactiveSelectors).forEach(el => {
         el.addEventListener('mouseenter', () => ring.classList.add('cursor-hover'));
         el.addEventListener('mouseleave', () => ring.classList.remove('cursor-hover'));
@@ -73,7 +71,6 @@ function initNavigation() {
     const mobileDrawer = document.getElementById('mobile-drawer');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-    // Sticky transform on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 40) {
             header.classList.add('scrolled');
@@ -86,13 +83,22 @@ function initNavigation() {
 
     const toggleDrawer = (open) => {
         const isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('open');
-        mobileDrawer.classList.toggle('open', isOpen);
+        if (isOpen) {
+            mobileDrawer.classList.add('open');
+            mobileDrawer.style.display = 'flex';
+        } else {
+            mobileDrawer.classList.remove('open');
+            mobileDrawer.style.display = 'none';
+        }
         menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         mobileDrawer.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
         document.body.style.overflow = isOpen ? 'hidden' : '';
     };
 
-    menuToggle.addEventListener('click', () => toggleDrawer());
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDrawer();
+    });
 
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => toggleDrawer(false));
@@ -123,18 +129,11 @@ function initScrollReveal() {
                 }
             });
         }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
         });
 
-        revealItems.forEach((item, index) => {
-            // Apply slight transition delay for siblings in containers
-            const siblingIndex = Array.from(item.parentNode.children).indexOf(item);
-            if (siblingIndex > 0 && siblingIndex < 5) {
-                item.style.transitionDelay = `${siblingIndex * 0.1}s`;
-            }
-            observer.observe(item);
-        });
+        revealItems.forEach(item => observer.observe(item));
     } else {
         revealItems.forEach(item => item.classList.add('revealed'));
     }
@@ -205,7 +204,6 @@ function initHeroTyping() {
         }
 
         if (!isDeleting && charIndex === currentPhrase.length) {
-            // Pause at complete word
             speed = 2200;
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
@@ -246,35 +244,31 @@ function initTerminalTabs() {
 
 /**
  * --------------------------------------------------------------------------
- * 7. Skills Matrix Category Filter
+ * 7. Animated Skill Bars (Scroll Triggered)
  * --------------------------------------------------------------------------
  */
-function initSkillFilters() {
-    const filterTabs = document.querySelectorAll('.filter-tab');
-    const skillCards = document.querySelectorAll('.skill-matrix-card');
-    if (!filterTabs.length || !skillCards.length) return;
+function initAnimatedSkillBars() {
+    const skillFills = document.querySelectorAll('.skill-bar-fill');
+    if (!skillFills.length) return;
 
-    filterTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const filterValue = tab.getAttribute('data-filter');
-
-            filterTabs.forEach(t => {
-                t.classList.remove('active');
-                t.setAttribute('aria-selected', 'false');
-            });
-            tab.classList.add('active');
-            tab.setAttribute('aria-selected', 'true');
-
-            skillCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                if (filterValue === 'all' || category === filterValue) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const targetWidth = bar.getAttribute('data-width') || '0%';
+                    bar.style.width = targetWidth;
+                    obs.unobserve(bar);
                 }
             });
+        }, { threshold: 0.15 });
+
+        skillFills.forEach(fill => observer.observe(fill));
+    } else {
+        skillFills.forEach(fill => {
+            fill.style.width = fill.getAttribute('data-width') || '0%';
         });
-    });
+    }
 }
 
 /**
@@ -322,7 +316,6 @@ function initShiviSimulator() {
     function processQuery(queryText, queryKey) {
         appendMessage('user', queryText);
 
-        // Simulated typing delay
         setTimeout(() => {
             const key = queryKey || 'default';
             const answer = botKnowledge[key] || botKnowledge.default;
@@ -330,7 +323,6 @@ function initShiviSimulator() {
         }, 450);
     }
 
-    // Chip click handlers
     chips.forEach(chip => {
         chip.addEventListener('click', () => {
             const queryKey = chip.getAttribute('data-query');
@@ -339,7 +331,6 @@ function initShiviSimulator() {
         });
     });
 
-    // Custom input submit
     if (inputForm && inputField) {
         inputForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -364,7 +355,6 @@ function initShiviSimulator() {
  * --------------------------------------------------------------------------
  */
 function initClipboard() {
-    // 9.1 Copy SHIVI AI Live Link
     const copyProjectBtn = document.getElementById('copy-project-btn');
     const copyBtnText = document.getElementById('copy-btn-text');
     const projectCopyFeedback = document.getElementById('project-copy-feedback');
@@ -388,7 +378,6 @@ function initClipboard() {
         });
     }
 
-    // 9.2 Copy Email Address
     const copyEmailBtn = document.getElementById('copy-email-btn');
     const copyEmailText = document.getElementById('copy-email-text');
     const emailAddressText = document.getElementById('email-address-text');
@@ -444,14 +433,13 @@ function initContactForm() {
             return;
         }
 
-        // Processing simulated submission
         submitBtn.disabled = true;
         submitBtn.querySelector('span').textContent = 'Preparing Dispatch...';
 
         setTimeout(() => {
             submitBtn.disabled = false;
             submitBtn.querySelector('span').textContent = 'Send Message';
-            statusMsg.style.color = 'var(--status-green)';
+            statusMsg.style.color = 'var(--green-status)';
             statusMsg.textContent = `✓ Thank you, ${name}! Your inquiry has been received. You can also reach out via LinkedIn or direct email.`;
             form.reset();
 
@@ -513,7 +501,7 @@ function initBackToTopProgress() {
     const circle = document.querySelector('.progress-ring__circle');
     if (!backToTopBtn || !circle) return;
 
-    const circumference = 2 * Math.PI * 20; // r = 20
+    const circumference = 2 * Math.PI * 20;
     circle.style.strokeDasharray = `${circumference} ${circumference}`;
 
     window.addEventListener('scroll', () => {
