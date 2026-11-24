@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website showcasing UI/UX web development and AI-driven projects, including **SHIVI AI**.
 
 ## 🚀 Live Demo
-*(Will be available via GitHub Pages once enabled)*
+Visit the live portfolio: [https://shivanshtiwari-dsai.github.io/Portfolio/](https://shivanshtiwari-dsai.github.io/Portfolio/)
 
 ## 🛠️ Tech Stack
 - **HTML5**: Semantic tags, accessible forms, clean section architecture.
