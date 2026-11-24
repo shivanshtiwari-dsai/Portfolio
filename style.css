@@ -87,8 +87,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     position: relative;
-    selection-background-color: var(--accent-indigo);
-    selection-color: #ffffff;
 }
 
 ::selection {
@@ -536,6 +534,7 @@ button, input, textarea {
 .accent-text {
     background: var(--accent-gradient);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 }
