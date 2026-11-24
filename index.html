@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivansh Tiwari | UI/UX & AI Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Shivansh Tiwari | B.Tech CSE (DS & AI) | UI/UX Web Developer</title>
+    <meta name="title" content="Shivansh Tiwari | B.Tech CSE (DS & AI) | UI/UX Web Developer">
+    <meta name="description" content="Portfolio of Shivansh Tiwari - Computer Science Engineering student specializing in Data Science, Artificial Intelligence, and modern UI/UX web development. Creator of SHIVI AI.">
+    <meta name="keywords" content="Shivansh Tiwari, Portfolio, Web Developer, UI/UX Designer, Data Science, Artificial Intelligence, SHIVI AI, SRMU, Frontend Developer">
+    <meta name="author" content="Shivansh Tiwari">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shivanshtiwari-dsai.github.io/Portfolio/">
+    <meta property="og:title" content="Shivansh Tiwari | UI/UX & AI Portfolio">
+    <meta property="og:description" content="Crafting responsive web interfaces and intelligent AI-driven applications like SHIVI AI.">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Shivansh<span>.dev</span></div>
+    <!-- Header / Navigation -->
+    <header id="header">
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="#home" class="logo">Shivansh<span>.dev</span></a>
+            
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About & Education</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -26,200 +44,417 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="greeting">Hello, I'm</p>
-            <h1>Shivansh Tiwari</h1>
-            <h2>B.Tech CSE (DS + AI) Student & UI/UX Web Developer</h2>
-            <p class="hero-sub">Crafting responsive web interfaces and building intelligent AI-driven solutions like SHIVI AI.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View SHIVI AI</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
-            <div class="hero-socials">
-                <a href="https://github.com/shivanshtiwari-dsai" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/shivanshtiwari-dsai/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    <span>LinkedIn</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About & Education Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">About Me & Education</h2>
-        <div class="about-grid">
-            <div class="about-card">
-                <h3>About Me</h3>
-                <p>
-                    I am an undergraduate Computer Science student specializing in Data Science and Artificial Intelligence. 
-                    As a UI/UX-focused web developer, I combine clean interface design with interactive front-end logic to create accessible, user-friendly applications.
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">👋 Welcome to my portfolio</span>
+                <p class="greeting">Hello, I'm</p>
+                <h1>Shivansh Tiwari</h1>
+                <h2>B.Tech CSE (DS & AI) &amp; UI/UX Web Developer</h2>
+                <p class="hero-sub">
+                    Passionate undergraduate student merging intuitive front-end interface design with intelligent AI-driven solutions, including <strong>SHIVI AI</strong>.
                 </p>
-            </div>
-            <div class="education-card">
-                <h3>Education</h3>
-                <div class="edu-item">
-                    <h4>Bachelor of Technology (B.Tech)</h4>
-                    <p class="degree">Computer Science & Engineering (DS + AI)</p>
-                    <p class="institution">Shri Ramswaroop Memorial University (SRMU)</p>
-                    <span class="badge">Undergraduate</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-alt">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <div class="skill-header">
-                    <h3>HTML</h3>
-                    <span>90%</span>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">Explore Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
                 </div>
-                <div class="progress-bar">
-                    <div class="progress" data-width="90%"></div>
-                </div>
-                <p>Semantic structure, accessible forms, and clean multi-section page architecture.</p>
-            </div>
 
-            <div class="skill-card">
-                <div class="skill-header">
-                    <h3>CSS</h3>
-                    <span>85%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" data-width="85%"></div>
-                </div>
-                <p>Responsive Grid & Flexbox layouts, custom UI themes, smooth transitions, and mobile-first styling.</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <h3>JS (JavaScript)</h3>
-                    <span>80%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress" data-width="80%"></div>
-                </div>
-                <p>Interactive DOM manipulation, event-driven UI logic, clipboard utilities, and dynamic validation.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Project</h2>
-        <div class="projects-wrapper">
-            <div class="project-card">
-                <div class="project-header">
-                    <span class="project-tag">AI Conversational Assistant</span>
-                    <span class="live-indicator">Live Project</span>
-                </div>
-                <h3>SHIVI AI — AI-Powered Chatbot</h3>
-                <p>
-                    Built a conversational chatbot with the help of AI. Designed with a clean, responsive chat interface 
-                    that enables real-time user interaction and intelligent automated responses.
-                </p>
-                <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JS</span>
-                    <span>AI Integration</span>
-                </div>
-                <div class="project-actions">
-                    <a href="https://shivanshtiwari-dsai.github.io/CHATBOT_SHIVI/" target="_blank" rel="noopener noreferrer" class="btn primary-btn">
-                        Launch SHIVI AI ↗
-                    </a>
-                    <button class="btn secondary-btn" id="copy-project-btn" data-url="https://shivanshtiwari-dsai.github.io/CHATBOT_SHIVI/">
-                        Copy Project Link
-                    </button>
-                </div>
-                <p id="project-copy-feedback" class="feedback-text"></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-alt">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Let's Connect</h3>
-                <p>Interested in collaborating or have feedback on SHIVI AI? Reach out directly via email or connect through my social profiles.</p>
-                <div class="email-box">
-                    <a href="mailto:shivanshtiw120706@gmail.com" id="email-text" class="email-link">shivanshtiw120706@gmail.com</a>
-                    <button id="copy-email-btn" class="copy-btn">Copy Email</button>
-                </div>
-                <p id="copy-feedback" class="feedback-text"></p>
-
-                <div class="social-cards">
-                    <a href="https://github.com/shivanshtiwari-dsai" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <div class="hero-socials">
+                    <a href="https://github.com/shivanshtiwari-dsai" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
-                        <div class="social-card-text">
-                            <h4>GitHub</h4>
-                            <p>@shivanshtiwari-dsai</p>
-                        </div>
+                        <span>GitHub</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/shivanshtiwari-dsai/" target="_blank" rel="noopener noreferrer" class="social-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <a href="https://www.linkedin.com/in/shivanshtiwari-dsai/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                         </svg>
-                        <div class="social-card-text">
-                            <h4>LinkedIn</h4>
-                            <p>Shivansh Tiwari</p>
-                        </div>
+                        <span>LinkedIn</span>
                     </a>
                 </div>
             </div>
+        </section>
 
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
+        <!-- About & Education Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <span class="section-tag">BACKGROUND &amp; ACADEMICS</span>
+                <h2 class="section-title">About Me &amp; Education</h2>
+                <p class="section-subtitle">Bridging computational engineering, data intelligence, and design.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- About Card -->
+                <div class="card about-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p>
+                        I am an undergraduate Computer Science Engineering student with an academic specialization in 
+                        <strong>Data Science &amp; Artificial Intelligence</strong>.
+                    </p>
+                    <p>
+                        Driven by a strong curiosity for both smart algorithms and delightful user interfaces, I focus on crafting clean, accessible front-ends that make complex technologies simple and engaging for real users.
+                    </p>
+                    <div class="about-highlights">
+                        <span class="highlight-item">🎯 Problem Solver</span>
+                        <span class="highlight-item">💻 UI/UX Enthusiast</span>
+                        <span class="highlight-item">🤖 AI Explorer</span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
+
+                <!-- Education Card -->
+                <div class="card education-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Education</h3>
+                    <div class="edu-item">
+                        <div class="edu-header">
+                            <h4>Bachelor of Technology (B.Tech)</h4>
+                            <span class="badge">Undergraduate</span>
+                        </div>
+                        <p class="degree">Computer Science &amp; Engineering (DS + AI)</p>
+                        <p class="institution">Shri Ramswaroop Memorial University (SRMU)</p>
+                        <div class="edu-details">
+                            <p><strong>Core Focus:</strong> Data Science, Artificial Intelligence, Web Architecture, Algorithms &amp; Software Design.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" placeholder="Write your message..." required></textarea>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section bg-alt">
+            <div class="section-header">
+                <span class="section-tag">CAPABILITIES</span>
+                <h2 class="section-title">Technical Skillset</h2>
+                <p class="section-subtitle">Systematically organized across front-end web development, AI concepts, and tools.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Group 1: Front-End & UI/UX -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-badge">Front-End &amp; UI/UX</span>
+                        <h3>Web Development</h3>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML5</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="90%"></div>
+                        </div>
+                        <p class="skill-desc">Semantic markup, accessible forms, modern page architecture.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>CSS3 &amp; Responsive UI</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="85%"></div>
+                        </div>
+                        <p class="skill-desc">Flexbox, CSS Grid, custom properties, animations, and mobile-first layouts.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript (ES6+)</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="80%"></div>
+                        </div>
+                        <p class="skill-desc">DOM manipulation, event-driven architecture, API consumption, async logic.</p>
+                    </div>
                 </div>
-                <button type="submit" class="btn primary-btn full-width">Send Message</button>
-                <p id="form-status" class="feedback-text"></p>
-            </form>
-        </div>
-    </section>
+
+                <!-- Group 2: AI & Data Science -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-badge">Specialization</span>
+                        <h3>AI &amp; Data Science</h3>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python Basics &amp; Scripting</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="85%"></div>
+                        </div>
+                        <p class="skill-desc">Core syntax, data structures, automation scripts, and logic building.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Data Science &amp; ML Foundations</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="75%"></div>
+                        </div>
+                        <p class="skill-desc">Data analysis fundamentals, algorithms, feature preparation, and model evaluation.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Conversational AI &amp; Prompt Engineering</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="85%"></div>
+                        </div>
+                        <p class="skill-desc">Conversational flow design, prompt optimization, and AI chatbot integration (SHIVI AI).</p>
+                    </div>
+                </div>
+
+                <!-- Group 3: Tools & Workflow -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <span class="category-badge">Workflow</span>
+                        <h3>Tools &amp; Environments</h3>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git &amp; GitHub</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="85%"></div>
+                        </div>
+                        <p class="skill-desc">Version control, branching, repository management, GitHub Pages hosting.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>VS Code &amp; Modern Dev Tools</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="90%"></div>
+                        </div>
+                        <p class="skill-desc">Efficient debugging, terminal workflows, browser DevTools inspection.</p>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>UI/UX Prototyping</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" data-width="80%"></div>
+                        </div>
+                        <p class="skill-desc">Wireframing, visual hierarchy, typography, and color theory principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <span class="section-tag">PORTFOLIO WORK</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world projects demonstrating applied AI and responsive web engineering.</p>
+            </div>
+
+            <div class="projects-container">
+                <!-- Flagship Project Card -->
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-badge-group">
+                            <span class="project-tag">Flagship Project</span>
+                            <span class="live-indicator"><span class="pulse-dot"></span> Live</span>
+                        </div>
+                        <span class="project-category">Conversational AI</span>
+                    </div>
+
+                    <div class="project-body">
+                        <h3>SHIVI AI — AI-Powered Chatbot</h3>
+                        <p class="project-desc">
+                            An intelligent conversational chatbot created with AI integration. Built with a responsive, modern chat interface that supports fluid real-time communication, clean message rendering, and automated conversational flows.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>AI Integration</span>
+                            <span>GitHub Pages</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://shivanshtiwari-dsai.github.io/CHATBOT_SHIVI/" target="_blank" rel="noopener noreferrer" class="btn primary-btn">
+                                Launch SHIVI AI ↗
+                            </a>
+                            <button class="btn secondary-btn" id="copy-project-btn" data-url="https://shivanshtiwari-dsai.github.io/CHATBOT_SHIVI/">
+                                Copy Project Link
+                            </button>
+                        </div>
+                        <p id="project-copy-feedback" class="feedback-text" aria-live="polite"></p>
+                    </div>
+                </div>
+
+                <!-- Secondary Project Card -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-badge-group">
+                            <span class="project-tag">Web Application</span>
+                            <span class="live-indicator"><span class="pulse-dot"></span> Active</span>
+                        </div>
+                        <span class="project-category">Front-End Architecture</span>
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Personal Portfolio &amp; Developer Hub</h3>
+                        <p class="project-desc">
+                            A systematic, mobile-responsive developer portfolio built from scratch with vanilla HTML5, CSS3, and JavaScript. Features interactive navigation, animated skill bars, clipboard helpers, and SEO metadata.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>Semantic HTML5</span>
+                            <span>Modern CSS Grid</span>
+                            <span>Vanilla JS</span>
+                            <span>Git Version Control</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="https://github.com/shivanshtiwari-dsai/Portfolio" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
+                                View Source Code ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section bg-alt">
+            <div class="section-header">
+                <span class="section-tag">COMMUNICATION</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have a project idea, feedback on SHIVI AI, or an internship opportunity? Let's connect!</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Info Column -->
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>Feel free to reach out directly via email or connect with me through my developer and professional profiles.</p>
+
+                    <!-- Direct Email Box -->
+                    <div class="email-box">
+                        <div class="email-details">
+                            <span class="label-tiny">DIRECT EMAIL</span>
+                            <a href="mailto:shivanshtiw120706@gmail.com" id="email-text" class="email-link">shivanshtiw120706@gmail.com</a>
+                        </div>
+                        <button id="copy-email-btn" class="copy-btn" title="Copy email address">Copy Email</button>
+                    </div>
+                    <p id="copy-feedback" class="feedback-text" aria-live="polite"></p>
+
+                    <!-- Profile Cards -->
+                    <div class="social-cards">
+                        <a href="https://github.com/shivanshtiwari-dsai" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="social-card-text">
+                                <h4>GitHub Profile</h4>
+                                <p>@shivanshtiwari-dsai</p>
+                            </div>
+                            <span class="arrow-indicator">↗</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/shivanshtiwari-dsai/" target="_blank" rel="noopener noreferrer" class="social-card">
+                            <div class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <div class="social-card-text">
+                                <h4>LinkedIn Profile</h4>
+                                <p>Shivansh Tiwari</p>
+                            </div>
+                            <span class="arrow-indicator">↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <form class="contact-form" id="contact-form" novalidate>
+                    <h3>Send a Direct Message</h3>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Shivansh Tiwari" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="4" placeholder="Hello Shivansh, I wanted to discuss..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn full-width">Send Message</button>
+                    <p id="form-status" class="feedback-text" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-socials">
-            <a href="https://github.com/shivanshtiwari-dsai" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/shivanshtiwari-dsai/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">Shivansh<span>.dev</span></div>
+                <p>B.Tech CSE (Data Science &amp; AI) — Shri Ramswaroop Memorial University</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/shivanshtiwari-dsai" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/shivanshtiwari-dsai/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Shivansh Tiwari. All Rights Reserved.</p>
         </div>
-        <p>&copy; 2026 Shivansh Tiwari | B.Tech CSE (DS+AI) — SRMU. All Rights Reserved.</p>
     </footer>
 
+    <!-- Back to Top Floating Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
 </html>
