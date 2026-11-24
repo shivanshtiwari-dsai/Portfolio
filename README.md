@@ -27,3 +27,4 @@ Portfolio/
 - **Developer**: Shivansh Tiwari
 - **Email**: [shivanshtiw120706@gmail.com](mailto:shivanshtiw120706@gmail.com)
 - **GitHub**: [@shivanshtiwari-dsai](https://github.com/shivanshtiwari-dsai)
+- **LinkedIn**: [Shivansh Tiwari](https://www.linkedin.com/in/shivanshtiwari-dsai/)
